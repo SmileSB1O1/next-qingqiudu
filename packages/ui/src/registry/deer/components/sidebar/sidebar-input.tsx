@@ -1,5 +1,5 @@
 import { Input } from "@workspace/ui/components/input.js";
-import { cn } from "@workspace/ui/lib/utils.js";
+import { cn } from "@workspace/ui/lib/utils";
 
 function SidebarInput({
   className,

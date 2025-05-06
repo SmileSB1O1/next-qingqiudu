@@ -1,4 +1,4 @@
-import { cn } from "@workspace/ui/lib/utils.js";
+import { cn } from "@workspace/ui/lib/utils";
 
 function SidebarInset({ className, ...props }: React.ComponentProps<"main">) {
   return (

@@ -2,7 +2,7 @@ import { ModeSwitcher } from "@/components/mode-switcher";
 import { NavHeader } from "@/components/nav-header";
 import { ThemeSelector } from "@/components/theme-selector";
 import { Separator } from "@workspace/ui/components/separator";
-import { SidebarInset } from "@workspace/ui/registry/deer/components/sidebar";
+import { SidebarInset } from "@workspace/ui/deer/components/sidebar/sidebar-inset";
 
 export default async function AppLayout({
   children,

@@ -1,9 +1,16 @@
-"use client"
+"use client";
 
-import * as React from "react"
-import { ThemeProvider as NextThemesProvider } from "next-themes"
+import * as React from "react";
+import { ThemeProvider as NextThemesProvider } from "next-themes";
+import { ActiveThemeProvider } from "./active-theme";
 
-export function Providers({ children }: { children: React.ReactNode }) {
+export function Providers({
+  children,
+  initialTheme,
+}: {
+  children: React.ReactNode;
+  initialTheme?: string | undefined;
+}) {
   return (
     <NextThemesProvider
       attribute="class"
@@ -12,7 +19,9 @@ export function Providers({ children }: { children: React.ReactNode }) {
       disableTransitionOnChange
       enableColorScheme
     >
-      {children}
+      <ActiveThemeProvider initialTheme={initialTheme}>
+        {children}
+      </ActiveThemeProvider>
     </NextThemesProvider>
-  )
+  );
 }

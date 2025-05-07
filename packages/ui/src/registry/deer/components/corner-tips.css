@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+.corner-tips-container {
+    @apply -indent-[999999px] overflow-hidden fixed w-[12rem] h-[12rem] top-0 right-0 z-9999 pointer-events-none no-underline
+}
+
+.corner-tips-container::before {
+    content: "";
+    padding: .38rem 0;
+    @apply bg-[#d7d7d7] shadow-[#ccc] pointer-events-auto opacity-80
+}
+
+.corner-tips-container::after {
+    content: attr(title);
+    line-height: 1.54rem;
+    @apply indent-0 text-center
+}
+
+.corner-tips-container::before,
+.corner-tips-container::after {
+
+    transform: rotate(45deg);
+    @apply absolute top-[2.3rem] -right-[3rem] block w-[12rem] h-[1.5rem]
+}

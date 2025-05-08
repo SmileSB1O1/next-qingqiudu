@@ -1,17 +1,21 @@
 import type { FC } from "react";
 
-import './corner-tips.css';
+import { cn } from "@workspace/ui/lib/utils";
+
+import "./corner-tips.css";
 
 interface CornerTipsProps {
   title: string;
 
   href?: string;
+
+  className?: string | undefined;
 }
 
 const CornerTips: FC<CornerTipsProps> = (props) => {
   return (
     <a
-      className="corner-tips-container"
+      className={cn("corner-tips-container", props.className)}
       href={props.href}
       title={props.title}
     >

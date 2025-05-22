@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+// api doc: https://fabricjs.com/api/interfaces/canvasoptions/
 import * as fabric from "fabric"; // v6
 
 interface LineDraggableProps {}
@@ -16,7 +17,6 @@ const LineDraggable: React.FC<LineDraggableProps> = () => {
     const canvas = new fabric.Canvas(canvasEl.current, {
       width: 800,
       height: 600,
-      backgroundColor: "#f0f0f0",
     });
 
     const line = new fabric.Line([50, 100, 200, 100], {
@@ -29,7 +29,7 @@ const LineDraggable: React.FC<LineDraggableProps> = () => {
 
     // Enable dragging
     line.set({
-      hasControls: true,
+      hasControls: false,
       lockRotation: true,
       lockScalingX: true,
       lockScalingY: true,

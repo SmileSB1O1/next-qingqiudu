@@ -22,7 +22,7 @@ export function NavHeader() {
         </NavigationMenuItem>
         <NavigationMenuItem>
           <NavigationMenuLink asChild data-active={pathname === "/charts"}>
-            <Link href="/charts">Charts</Link>
+            <Link href="/rxjs-marbles">Rxjs Marbles</Link>
           </NavigationMenuLink>
         </NavigationMenuItem>
         <NavigationMenuItem>

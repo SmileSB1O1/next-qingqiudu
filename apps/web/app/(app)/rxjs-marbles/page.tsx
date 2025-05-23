@@ -1,10 +1,13 @@
-import LineDraggable from "@workspace/ui/components/line-draggable";
+
+import LineDragMarbles from "@workspace/ui/components/line-drag-mables";
 
 export default function Page() {
   return (
     <div className="flex items-center justify-center min-h-svh">
       <div className="flex flex-col items-center justify-center gap-4">
-        <LineDraggable />
+        <LineDragMarbles>
+          <div>Test</div>
+        </LineDragMarbles>
       </div>
     </div>
   );
